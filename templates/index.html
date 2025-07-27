@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Demo page</h1>
+  <p>This page demonstrates the dynamic menu.</p>
+  {% load menu_tags %}
+  {# Draw the menu named 'main_menu' #}
+  {% draw_menu 'main_menu' %}
+{% endblock %}
