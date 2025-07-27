@@ -1,0 +1,11 @@
+{# Recursive template to render a single menu node and its children. #}
+<li class="{% if node.active %}active{% endif %}{% if node.open %} open{% endif %}">
+  <a href="{{ node.item.get_absolute_url }}">{{ node.item.title }}</a>
+  {% if node.children and (node.open or node.active) %}
+    <ul>
+      {% for child in node.children %}
+        {% include 'menu/menu_item.html' with node=child %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</li>
