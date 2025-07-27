@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Menu Project</title>
+    <style>
+      /* Basic styling for demonstration */
+      ul.menu { list-style-type: none; padding-left: 0; }
+      ul.menu li { margin: 0.5em 0; }
+      ul.menu li.active > a { font-weight: bold; }
+      ul.menu li.open > ul { margin-left: 1em; }
+    </style>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>
