@@ -1,0 +1,8 @@
+{# Template for rendering a menu tree. Expects 'menu_tree' in context. #}
+{% if menu_tree %}
+<ul class="menu">
+  {% for node in menu_tree %}
+    {% include 'menu/menu_item.html' with node=node %}
+  {% endfor %}
+</ul>
+{% endif %}
